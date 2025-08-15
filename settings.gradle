@@ -1,0 +1,40 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' } // 添加 JitPack 仓库
+        maven {
+            url "https://nxs.netcosmos.cn/nexus/repository/ClGameSdk/"
+            // 如果需要认证（视仓库权限设置）
+            credentials {
+                username = "xz-game-read"
+                password = "RmXQx#HLl5wzhkiBor"
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {
+            url "https://nxs.netcosmos.cn/repository/ClGameSdk/"
+            credentials {
+                username = "xz-game-read"
+                password = "RmXQx#HLl5wzhkiBor"
+            }
+        }
+    }
+}
+
+rootProject.name = "ClangGameDemo"
+include ':app'
