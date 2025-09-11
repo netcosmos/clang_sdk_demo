@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return;
         }
+
         //请替换真实的AppId和AppKey
         ClGameSdk.init("123456", "123456", new ClGameSdkInitCallback() {
             @Override
